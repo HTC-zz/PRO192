@@ -1,43 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author PC
- */
-public class SpecCar extends Car {
-    private int type;
-
-    public SpecCar() {
+public class SpecCar extends Car{
+    public int type;
+    public int getType() {
+        return type;
     }
-
-    public SpecCar(String maker, int price, int type) {
-        super(maker, price);
+    public void setType(int type) {
         this.type = type;
     }
-
-    @Override
-    public String toString() {
-        return super.toString() + ", " + type;
+        public String getMaker() {
+        return Maker;
     }
 
-    public void setData() {
-     this.setMaker("XZ" + this.getMaker());
-     this.setPrice(this.getPrice() + 20);
-          
+    public void setMaker(String Maker) {
+        this.Maker = Maker;
     }
-    
-    public int getValue(){
-        int inc = 0;
-    
-        if( type < 7 ){
-            inc = 10;
-    }else {
-            inc = 15;
+
+    public int getPrice() {
+        return Price;
+    }
+
+    public void setPrice(int Price) {
+        this.Price = Price;
+    }
+    public String setData() {
+        return "XZ" + super.getMaker() + ", " + super.getPrice();
+    }
+    public String tostring() {
+        return super.toString() + "," + type;
+    }
+    public int getValue() {
+        if ( type < 7) {
+            return super.getPrice() + 10;
         }
-        return this.getPrice() + inc;
+        else if (type == 10) {
+            return super.getPrice() + 15;
+        }
+        else 
+            return 0;
     }
 }

@@ -6,26 +6,30 @@
 
 /**
  *
- * @author PC
+ * @author Acer
  */
 public class Book {
-     
-     private String title;
-     private int price;
-
-    public Book(){
-      }
-    public Book(String title, int price) {
+    private String title;
+    private int price;
+    public Book () {}
+    public Book (String title, int price) {
         this.title = title;
         this.price = price;
-    }
-    public String getTitle(){
+    }     
+    public String getTitle() {
         return title.toUpperCase();
-        }
-    public int getPrice(){
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPrice() {
         return price;
     }
-    public void setPrice(int price){
+
+    public void setPrice(int price) {
         this.price = price;
-      }
+    }
+           
 }

@@ -6,34 +6,28 @@
 
 /**
  *
- * @author PC
+ * @author Acer
  */
 public class Car {
-    private String maker;
-    private int price;
+    public String Maker;
+    public int Price;
 
-  public Car(){
-      
-  }  
-  public Car(String maker, int price){
-      this.maker = maker;
-      this.price = price;
-  }
-   public String getMaker(){
-       return maker;
-   }
-   public int getPrice(){
-       return price;
-   }
-   public void setMaker (String maker){
-       this.maker= maker;
-   }
-   public void setPrice (int price){
-       this.price= price;
-   }
+    public String getMaker() {
+        return Maker;
+    }
 
-    @Override
+    public void setMaker(String maker) {
+        this.Maker = maker;
+    }
+
+    public int getPrice() {
+        return Price;
+    }
+
+    public void setPrice(int price) {
+        this.Price = price;
+    }
     public String toString() {
-        return maker + ", " + price;
+        return Maker + "," + Price;
     }
 }
